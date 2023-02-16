@@ -11,6 +11,8 @@ const currencySchema = new mongoose.Schema({
    metaDescription: { type: String },
 });
 
+currencySchema.index({ currencyName: 1 });
+
 const currencyModel = mongoose.model('currency', currencySchema);
 
 module.exports = currencyModel;

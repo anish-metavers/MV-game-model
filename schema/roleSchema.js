@@ -5,6 +5,8 @@ const roleSchema = new mongoose.Schema({
    createdAt: { type: Date, default: Date.now },
 });
 
+roleSchema.index({ roleName: 1 });
+
 const roleModel = mongoose.model('role', roleSchema);
 
 module.exports = roleModel;

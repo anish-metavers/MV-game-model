@@ -58,7 +58,7 @@ const authSchema = new mongoose.Schema(
       madels: [
          { madel: { type: mongoose.Types.ObjectId, ref: 'achievement' } },
       ],
-      roles: [{ role: { type: mongoose.Types.ObjectId, ref: 'role' } }],
+      roles: [{ type: mongoose.Types.ObjectId, ref: 'role' }],
       createdAt: { type: Date, default: Date.now },
       otp: { type: String, required: true },
       active: { type: Boolean, default: false },
